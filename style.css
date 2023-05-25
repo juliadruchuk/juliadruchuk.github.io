@@ -18,6 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 40px 32px;
+  align-items: center;
 }
 
 .logo-and-brandname {
@@ -38,22 +39,21 @@ header {
   color: inherit;
 }
 
-.nav-text {
-  line-height: 38px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 38px;
-}
-
 img {
   width: 100%;
 }
 
-ul {
+.menu-list {
   display: flex;
   align-items: center;
   gap: 42px;
+  align-items: center;
+}
+.hamburger {
+  width: 24px;
+  height: 24px;
+  background: url(./hamburger.png);
+  display: none;
 }
 
 li {
@@ -84,13 +84,14 @@ h1 {
   line-height: 64px;
   color: #1c1e52;
   margin-bottom: 22px;
+  width: 84%;
 }
 
-span {
+.span-main-text {
   color: #07b464;
 }
 
-p {
+.main-text-par {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -116,7 +117,7 @@ p {
 .main-img {
   width: 667px;
   margin-top: -135px;
-  padding-right: 20px;
+  padding-right: 61px;
 }
 
 .made-by {
@@ -125,4 +126,91 @@ p {
   font-size: 22px;
   line-height: 64px;
   color: #1c1e52;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-list {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  main {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .main-text {
+    width: 100%;
+    padding-inline: 11%;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .main-text-par {
+    padding-inline: 14%;
+    text-align: center;
+  }
+
+  .know-more-button {
+    margin-top: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 226px;
+  }
+
+  .main-img {
+    width: 100%;
+    margin: 0;
+    margin-inline: 10%;
+    margin-top: 15px;
+  }
+
+  .border {
+    width: 246px;
+    height: 245px;
+    border: 1px solid #dedede;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-inline: 18%;
+  }
+
+  .logo-atom {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    position: absolute;
+    margin: 24px 104px 182px 104px;
+  }
+
+  .h-text {
+    width: 100%;
+    font-family: "Athiti";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0b4654;
+    margin-top: 37px;
+  }
+
+  .p-text {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 12;
+    line-height: 16px;
+    text-align: center;
+    color: #5c5c5c;
+  }
 }
